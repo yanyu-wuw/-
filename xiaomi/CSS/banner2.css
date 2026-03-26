@@ -1,0 +1,69 @@
+.banner2{
+    margin-top: 14px;
+    margin-bottom: 26px;
+}
+.banner2-service{
+    width: 234px;
+    height: 178px;
+    background-color: #5f5750;
+    margin-right: 14px;
+    float: left;
+    padding: 0 0;
+    display: block;
+    overflow: hidden;
+}
+.banner2-service .banner2-item{
+    width: 78px;
+    height:89px;
+    margin-right:0;
+    float: left;
+    text-align: center;
+    color:#fff;
+    font-size: 12px;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 15px 0;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+    transform: scale(1);
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+    background: linear-gradient(145deg, #6a5f56, #554e47);
+}
+.banner2-service .banner2-item:hover{
+    transform: scale(1.05);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.banner2-service .banner2-item i{
+    display:block;
+    font-size:24px;
+    margin-bottom:8px;
+    color: #fff;
+}
+
+.banner2-img-item{
+    width: 348px;
+    height: 178px;
+    margin-right: 14px;
+    float: left;
+    display: block;
+
+}
+
+.banner2-img-item img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.banner2 .banner2-img-item:last-child{
+    margin-right: 0;
+}
+
+
+
+.banner2-img-container{
+    float: left;
+    overflow: hidden;
+}

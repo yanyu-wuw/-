@@ -1,0 +1,12 @@
+.main{
+    background-color: #f5f5f5;
+    padding: 22px 0;
+}
+.banner3{
+    display: block;
+    background: red;
+}
+.banner3 img{
+    width: 100%;
+    display: block;
+}

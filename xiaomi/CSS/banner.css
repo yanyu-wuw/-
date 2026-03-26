@@ -1,0 +1,61 @@
+.banner{
+    height: 460px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner a.cover img{
+    width: 100%;
+    height: 460px;
+    display: block;
+}
+
+.banner-pointer{
+    position: absolute;
+    width: 40px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 70px;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -35px;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.banner-pointer:hover{
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.banner-pointer-left{
+    left: 0;
+}
+
+.banner-pointer-right{
+    right: 0;
+}
+
+.banner-dots{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    z-index: 10;
+}
+
+.banner-dots span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.banner-dots span.banner-dots-selected{
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}

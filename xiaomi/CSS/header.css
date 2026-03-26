@@ -1,0 +1,363 @@
+.header{
+    height: 100px;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.header-logo h1{
+    display: none;
+}
+
+.header-logo{
+    background: url('../img/logo.png') no-repeat center;
+    width: 56px;
+    height: 56px;
+    margin-top: 22px;
+    margin-right: 42px;
+    display: block;
+    background-size: contain;
+}
+
+.header-menu{
+    height: 100px;
+    line-height: 100px;
+}
+
+.header-menu .menu-item{
+    display: inline-block;
+    padding: 0 12px;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.header-menu .menu-item:hover{
+    color: black;
+}
+
+/* 分类触发器样式 */
+.category-trigger {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.category-trigger .menu-item {
+    background: #ff6700;
+    color: #fff;
+    padding: 0 20px;
+}
+
+/* 分类菜单容器 */
+.category-menu {
+    position: absolute;
+    top: 100%;
+    left: -40px; 
+    width: 200px; 
+    height: auto;
+    max-height: 400px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 1000;
+}
+
+/* 鼠标悬停时显示分类菜单 */
+.category-trigger:hover .category-menu {
+    display: block;
+}
+
+.category-trigger:hover .category-menu {
+    display: block;
+}
+/* 左侧分类列表 */
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-item {
+    /*position: relative;*/
+    padding: 2px 15px; /* 上比字体高2px，下比字体多2px */
+    border-bottom: none;
+    transition: all 0.3s;
+    margin:0;
+    border:none;
+    z-index: 10;
+}
+
+.category-item:hover {
+    background: orange;
+    padding-left: 20px;
+}
+
+.category-item a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    line-height: 2.4;
+    font-size: 14px; /* 明确字体大小，确保边距计算准确 */
+}
+
+/* 右侧子菜单 */
+.category-submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 800px;
+    height: 400px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: none;
+    overflow-y: auto; /* 实现上下滑动 */
+}
+
+/* 鼠标悬停时显示子菜单 */
+.category-item:hover .category-submenu {
+    display: block;
+}
+
+/* 子菜单内容 */
+.submenu-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.submenu-item {
+    width: 20%;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.submenu-item:hover {
+    transform: translateY(-5px);
+}
+
+.submenu-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.submenu-item span {
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+
+/* 菜单触发器样式 */
+.menu-trigger {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* 菜单二级菜单 */
+.menu-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    min-width: 1200px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+/* 确保header-menu作为定位基准 */
+.header-menu {
+    position: relative;
+    height: 100px;
+    line-height: 100px;
+}
+
+/* 鼠标悬停时显示二级菜单 */
+.menu-trigger:hover .menu-submenu {
+    display: block;
+}
+
+/* 二级菜单内容 */
+.menu-submenu .submenu-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.menu-submenu .submenu-item {
+    width: 22.5%;
+    text-align: center;
+    transition: all 0.3s;
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-submenu .submenu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-submenu .submenu-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+.menu-submenu .submenu-item span {
+    display: block;
+    font-size: 21px;
+    color: #333;
+}
+
+.menu-submenu .submenu-item .price {
+    color: #ff6700;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+/* 移除原有的header-submenu样式 */
+.header-submenu {
+    display: none !important;
+}
+
+/* 确保服务和社区菜单项的样式 */
+.header-menu > .menu-item {
+    display: inline-block;
+    padding: 0 12px;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.header-menu > .menu-item:hover {
+    color: #ff6700;
+}
+
+/* 调整header-menu的高度和行高 */
+.header-menu {
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+}
+
+/* 调整menu-item的显示方式 */
+.menu-trigger .menu-item {
+    display: inline-block;
+    padding: 0 12px;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.menu-trigger .menu-item:hover {
+    color: #ff6700;
+}
+
+.no-submenu + .category-submenu{
+    display: none;
+}
+
+.header-search {
+    display:flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-suggest {
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#fff;
+    border:1px solid #e0e0e0;
+    border-top:none;
+    box-shadow: 0 2px 10px rhba(0,0,0,0.1);
+    z-index:1000;
+    display:none;
+}
+
+.header-search:focus-within .header-suggest{
+    display:block;
+}
+
+/*搜索建议列表*/
+.suggest-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.suggest-list li{
+    padding:8px 12px;
+    cursor:pointer;
+    transition: background-color 0.3s;
+}
+
+.suggest-list li:hover{
+    background-color:#f5f5f5;
+}
+
+.header-search{
+    margin-top: 25px;
+}
+/*搜索建议悬停效果*/
+.suggest-list li a{
+    color:#333;
+    text-decoration:none;
+    display:block;
+}
+.header-search input{
+    flex:1;
+    width:245px ;
+    height: 40px;
+    font-size: 14px;
+    padding:0 12px;
+    outline: none;
+    border: 1px solid #ccc;
+
+}
+
+/* 搜索按钮样式 */
+.header-search .header-searchicon {
+    width: 50px;
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #666;
+}
+
+.header-searchicon .iconfont{
+    font-size: 20px;
+    color:#777;
+}
+.header-search input:focus{
+    border-color: red;
+}
+
+.header-search input:focus~.header-searchicon{
+    border-color:brown;
+}
+
+.header-searchicon:hover{
+    background: #ff6700;
+    border-color: #ff6700;
+    color: white;   
+}
+
+.header-search input :hover{
+    border-color:gray;
+}
+
